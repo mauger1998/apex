@@ -1,0 +1,498 @@
+:root {
+    --dark-green:#2D5929;
+    --light-green:#6DAC67;
+    --black:#030303;
+    --heading-one:60px;
+    --mobile-heading-one:40px;
+    --text:18px;
+    --mobile-text:16px;
+    --banner:25px;
+    --mobile-banner:20px;
+    --heading-two:50px;
+    --mobile-heading-two:40px;
+    --tag:16px;
+    --mobile-tag:14px;
+    --card-heading:22px;
+    --mobile-card-heading:18px;
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Helvetica, sans-serif
+
+}
+section,
+main,
+header,
+footer {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    padding:8rem 4rem;
+    width:100%;
+    max-width:1440px;
+}
+@media (max-width:700px) {
+    .wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:500px) {
+    .wrapper {
+        padding-inline:1rem;
+    }
+}
+h1 {
+    font-size:var(--heading-one);
+    color:white;
+    line-height:1;
+    text-align:left;
+}
+h2 {
+    line-height:1;
+    color:var(--black);
+    font-size:var(--heading-two);
+    text-align:left;
+}
+p {
+    line-height:1.75;
+    font-weight:300;
+    font-size:var(--text);
+    text-align:left;
+}
+@media (max-width:500px) {
+    h1 {
+        font-size:var(--mobile-heading-one);
+    }
+    h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    p {
+        font-size:var(--mboile-text);
+    }
+}
+img {
+    width:100%;
+}
+
+button {
+    cursor:pointer;
+    padding:0.75rem 2rem;
+    background-color:var(--dark-green);
+    color:white;
+    font-weight:700;
+    font-size:var(--text);
+    transition:500ms;
+    border:none;
+}
+button:hover {
+    background-color: transparent;
+    color:var(--dark-green);
+    transition:500ms;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+ul {
+    list-style:none;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+.logo img {
+    width:75px;
+}
+.tag {
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    font-weight:500;
+}
+.tag img {
+    width:30px;
+}
+.tag span {
+    display:flex;
+    align-items: center;
+}
+
+.row {
+    flex-direction:row;
+}
+.column {
+    flex-direction:column;
+}
+.background {
+    opacity:0.1;
+}
+section,
+main {
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner {
+    width:100%;
+    font-family: 'League Gothic', sans-serif;
+    color:white;
+    background-color:var(--black);
+}
+.banner > * {
+    transition:500ms;
+}
+.banner .wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-block:1rem;
+}
+/* Header */
+header {
+    position:fixed;
+    z-index:2;
+}
+.header-wrapper {
+    padding:2rem 4rem;
+    width:100%;
+    max-width:1440px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:700px) {
+    .header-wrapper {
+        padding-inline:2rem;
+    }
+}
+@media (max-width:500px) {
+    .header-wrapper {
+        padding-inline:1rem;
+    }
+}
+nav ul li {
+    color:white;
+    font-weight:700;
+}
+.logo {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+nav {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:2rem;
+}
+
+/* Main */
+main {
+    background-image: linear-gradient(#03030370, #03030370), url(apex-home-png/WhatsAppImage2023-06-02at08.332.png);
+}
+main .wrapper {
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap:2rem;
+    min-height:700px;
+    padding-bottom:4rem;
+}
+main h1 {
+    max-width:20ch;
+}
+main p {
+    max-width:60ch;
+    color:white;
+}
+@media (max-width:1150px) {
+    nav {
+        display:none;
+    }
+}
+@media (max-width:765px) {
+    main h1 {
+        font-size:50px;
+    }
+    
+}
+@media (max-width:579px) {
+    main h1 {
+        font-size:45px;
+    }
+}
+/* Banner */
+
+.banner p {
+    font-family: 'League Gothic', sans-serif !important;
+    font-size:var(--banner);
+    letter-spacing: 0.6rem;
+    line-height:1.2;
+}
+.banner .wrapper {
+    padding-inline:0;
+}
+/* Why */
+
+.why-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:4rem;
+}
+.why-top {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap:4rem;
+}
+.why-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:100%;
+    gap:1rem;
+}
+.card {
+    padding:2rem;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    min-height:450px;
+    padding:1rem;
+}
+.card p {
+    line-height:1;
+    color:white;
+    font-weight:700;
+    font-size:var(--card-heading);
+}
+.card:nth-child(1) {
+    background-image: linear-gradient(to top, #030303, #03030300 20%), url(apex-home-png/WhatsApp_Image_2023-06-02_at_08_28_51-transformed1.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card:nth-child(2) {
+    background-image: linear-gradient(to top, #030303, #03030300 20%), url(apex-home-png/WhatsApp_Image_2023-06-02_at_08_29_54-transformed1.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card:nth-child(3) {
+    background-image: linear-gradient(to top, #030303, #03030300 20%), url(apex-home-png/WhatsApp_Image_2023-06-02_at_08_35_05-transformed2.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card:nth-child(4) {
+    background-image: linear-gradient(to top, #030303, #03030300 20%), url(apex-home-png/WhatsApp_Image_2023-06-02_at_08_59_40-transformed1.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:1150px) {
+    .why-grid {
+        grid-template-columns: 1fr 1fr;        
+    }
+    .why-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap:0;
+    }
+}
+@media (max-width:600px) {
+    .why-grid {
+        grid-template-columns: 1fr;        
+    }
+}
+@media (max-width:500px) {
+    .card p {
+        font-size:var(--mobile-card-heading);
+    }
+}
+
+/* Quote */
+.quote-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+}
+.quote-section h2 {
+    font-size:42px;
+    line-height:1.2;
+}
+@media (max-width:500px) {
+    .quote-section h2 {
+        font-size:35px;
+    }
+}
+/* Gallery */
+
+.gallery-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:4rem;
+}
+.gallery-grid {
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+}
+.gallery-grid-left {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+}
+@media (max-width:1150px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:600px) {
+    .gallery-grid-left {
+        grid-template-columns: 1fr;
+    }
+}
+/* Best */
+
+.best-section {
+    background-image: linear-gradient(to right, #030303b4, #03030300 100%), url(apex-home-png/WhatsApp_Image_2023-06-02_at_09_08_08-transformed1.png);
+}
+.best-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.best-section h2 {
+    color:white;
+    max-width:15ch;
+}
+.best-section p {
+    color:white;
+    max-width:50ch;
+}
+@media (max-width:500px) {
+    .best-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    .best-section p {
+        font-size:var(--mobile-text);
+    }
+}
+/* CTA */
+.cta-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    padding-block:12rem;
+}
+.cta-section h2 {
+    font-size:var(--heading-one);
+    max-width:20ch;
+    text-align:center;
+}
+@media (max-width:500px) {
+    .cta-section h2 {
+        font-size:var(--mobile-heading-one)
+    }
+}
+/* Footer */
+
+footer img {
+    width:100px;
+}
+footer .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+    padding-block:2rem;
+}
+footer .logo {
+    display:flex;
+    align-items: center;
+}
+.footer-top {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-top ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    justify-content: flex-end;
+}
+.footer-bottom {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width:100%;
+    border-top:1px solid black;
+    padding-top:4rem;
+}
+footer a,
+footer p {
+    color:black;
+}
+.footer-bottom a {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0.5rem;
+}
+footer p {
+    font-size:16px;
+}
+
+
+@media (max-width:700px) {
+    footer .wrapper {
+        padding-inline:2rem;
+    }
+    .footer-top,
+    .footer-bottom {
+        flex-direction:column;
+        gap:4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-bottom a {
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-top ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:600px) {
+    .doctor-section h2 {
+        font-size:var(--mobile-heading-twp);
+    }
+    .doctor-list-item p {
+        font-weight:700;
+        font-size:var(--mobile-card-heading);
+    }
+    
+}
+@media (max-width:500px) {
+    footer .wrapper {
+        padding-inline:1rem;
+    }
+}
