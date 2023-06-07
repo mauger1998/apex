@@ -533,3 +533,27 @@ footer p {
         font-size:var(--mobile-text);
     }
 }
+
+/* Job */
+
+.job-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+.job-left,
+.job-right {
+    width:50%;
+}
+.job-right {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.job-grid .wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+    padding-top:0;
+}
