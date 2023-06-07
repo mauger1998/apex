@@ -89,11 +89,10 @@ button {
     font-weight:700;
     font-size:var(--text);
     transition:500ms;
-    border:none;
+    border:2px solid var(--dark-green);
 }
 button:hover {
     background-color: transparent;
-    color:var(--dark-green);
     transition:500ms;
     border:2px solid var(--dark-green);
 
@@ -254,9 +253,11 @@ main {
 header {
     position:fixed;
     z-index:2;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 .header-wrapper {
-    padding:2rem 4rem;
+    padding:1rem 4rem;
     width:100%;
     max-width:1440px;
     display:flex;
@@ -291,7 +292,7 @@ nav {
 
 /* Main */
 main {
-    background-image: linear-gradient(#030303a6, #030303a6), url(../apex-pagetwo-png/WhatsApp_Image_2023-06-02_at_08_47_02-transformed1.png);
+    background-image: linear-gradient(#030303a6, #030303a6), url(../apex-services-png/construction-plans-with-white-helmet-drawing-tools-bluepr1.png);
 }
 main .wrapper {
     display:flex;
@@ -556,4 +557,21 @@ footer p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:1rem;
     padding-top:0;
+}
+@media (max-width:1150px) {
+    .job-section .wrapper {
+        flex-direction: column;
+    }
+    .job-left,
+    .job-right {
+        width:100%;
+    }
+    .job-grid .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:600px) {
+    .job-grid .wrapper {
+        grid-template-columns: 1fr;
+    }
 }
