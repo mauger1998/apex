@@ -292,7 +292,7 @@ nav {
 
 /* Main */
 main {
-    background-image: linear-gradient(#030303a6, #030303a6), url(../apex-services-png/construction-plans-with-white-helmet-drawing-tools-bluepr1.png);
+    background-image: linear-gradient(#030303a6, #030303a6), url(../apex-service-more/WhatsApp_Image_2023-06-02_at_08_28_08-transformed1.png);
 }
 main .wrapper {
     display:flex;
@@ -574,4 +574,89 @@ footer p {
     .job-grid .wrapper {
         grid-template-columns: 1fr;
     }
+}
+
+/* Service */
+
+.service-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+
+.service-right {
+    width:50%;
+}
+.service-left {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:50%;
+    gap:2rem;
+}
+.service-left img {
+    width:30px;
+}
+
+.apex-list {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.apex-list-item {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+.apex-list-item p {
+    line-height:1;
+    font-size:var(--text);
+    font-weight:700;
+}
+.additional {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0.5rem;
+}
+.additional p {
+    font-size:14px;
+    line-height:1;
+}
+@media (max-width:1150px) {
+    .service-section .wrapper {
+        flex-direction: column;
+    }
+    .service-left,
+    .service-right {
+        width:100%;
+    }
+}
+@media (max-width:600px) {
+    .job-grid .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:500px) {
+    .apex-list p {
+        font-size:var(--mobile-text);
+    }
+    .additional p {
+        font-size:12px;
+    }
+}
+
+/* Short */
+.short-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.short-section h2 {
+    max-width:25ch;
+}
+.short-section p {
+    max-width:60ch;
 }
