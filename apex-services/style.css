@@ -61,7 +61,7 @@ h2 {
     text-align:left;
 }
 p {
-    line-height:1.75;
+    line-height:1.5;
     font-weight:300;
     font-size:var(--text);
     text-align:left;
@@ -94,8 +94,11 @@ button {
 button:hover {
     background-color: transparent;
     transition:500ms;
+    color:var(--dark-green);
     border:2px solid var(--dark-green);
-
+}
+header button:hover {
+    color:white;
 }
 a {
     color:white;
@@ -201,7 +204,7 @@ main {
     gap:0.5rem;
 }
 .menu {
-    width:30px;
+    width:50px;
     display:none;
     cursor:pointer;
 }
@@ -222,7 +225,7 @@ main {
 .dropdown > a {
     font-weight:300 !important;
 }
-@media (max-width:1000px) {
+@media (max-width:1150px) {
     nav ul {
         display:none;
     }
@@ -251,7 +254,7 @@ main {
 }
 /* Header */
 header {
-    position:fixed;
+    position:absolute;
     z-index:2;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -292,7 +295,7 @@ nav {
 
 /* Main */
 main {
-    background-image: linear-gradient(#030303a6, #030303a6), url(../apex-service-more/WhatsApp_Image_2023-06-02_at_08_28_08-transformed1.png);
+    background-image: linear-gradient(#030303a6, #030303a6), url(../new-service/WhatsApp_Image_2023-06-02_at_09_04_03-transformed1.png);
 }
 main .wrapper {
     display:flex;
@@ -505,7 +508,7 @@ footer p {
 .test-card p:nth-of-type(2) {
     font-weight:300;
     font-size:var(--text);
-    line-height:1.75;
+    line-height:1.5;
 }
 
 
@@ -537,10 +540,18 @@ footer p {
 
 /* Job */
 
+.job-section {
+    background-color:var(--light-green);
+}
+
 .job-section .wrapper {
     display:flex;
     align-items: center;
     gap:4rem;
+    padding-bottom:6rem;
+}
+.job-grid {
+    margin-top:6rem;
 }
 .job-left,
 .job-right {
@@ -557,6 +568,21 @@ footer p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap:1rem;
     padding-top:0;
+}
+.job-section h2,
+.job-section p {
+    color:white;
+}
+
+.job-section button {
+    background-color:white;
+    color:var(--light-green);
+    border:2px solid white;
+}
+.job-section button:hover {
+    background-color:transparent;
+    color:white;
+    border:2px solid white;
 }
 @media (max-width:1150px) {
     .job-section .wrapper {
@@ -659,4 +685,23 @@ footer p {
 }
 .short-section p {
     max-width:60ch;
+}
+
+.service-section {
+    position:relative;
+}
+
+.abs {
+    position:absolute;
+    bottom:0;
+    width:70%;
+    opacity:0.2;
+    z-index:-1;
+    right:0;
+
+}
+@media (max-width:700px) {
+    .abs {
+        width:100%;
+    }
 }
