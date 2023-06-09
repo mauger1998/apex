@@ -725,3 +725,8 @@ footer p {
         width:100%;
     }
 }
+
+.gallery-grid img {
+    aspect-ratio:1/1;
+    object-fit:cover;
+}
