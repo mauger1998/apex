@@ -496,3 +496,44 @@ textarea {
         font-size:45px;
     }
 }
+.scroller {
+    width:25px;
+    transition:500ms;
+    animation: pulse 2500ms forwards ease infinite;
+}
+@keyframes pulse {
+    0% {
+        scale:1;
+    }
+    50% {
+        scale:1.2;
+    }
+    100% {
+        scale:1;
+    }
+}
+
+main button {
+    background-color:transparent !important;
+    border:none;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:1rem;
+    padding-left:0;
+}
+main button:hover .scroller {
+    transition:500ms;
+}
+
+main button:hover {
+    background-color:transparent !important;
+    border:none;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:1rem;
+    padding-left:0;
+    color:white;
+    transition:500ms;
+}

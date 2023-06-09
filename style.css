@@ -512,16 +512,26 @@ main p {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:2rem;
+    gap:1rem;
     padding:2rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.test-card p:nth-of-type(1) {
+.name-box {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0.5rem;
+}
+.test-card  p:nth-of-type(1) {
     font-weight:700;
     font-size:var(--card-heading);
     line-height:1;
 }
-.test-card p:nth-of-type(2) {
+.test-card  p:nth-of-type(2) {
+    font-weight:500;
+    line-height:1;
+}
+.test-card > p:nth-of-type(1) {
     font-weight:300;
     font-size:var(--text);
     line-height:1.5;
@@ -729,4 +739,46 @@ footer p {
 .gallery-grid img {
     aspect-ratio:1/1;
     object-fit:cover;
+}
+
+.scroller {
+    width:25px;
+    transition:500ms;
+    animation: pulse 2500ms forwards ease infinite;
+}
+@keyframes pulse {
+    0% {
+        scale:1;
+    }
+    50% {
+        scale:1.2;
+    }
+    100% {
+        scale:1;
+    }
+}
+
+main button {
+    background-color:transparent !important;
+    border:none;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:1rem;
+    padding-left:0;
+}
+main button:hover .scroller {
+    transition:500ms;
+}
+
+main button:hover {
+    background-color:transparent !important;
+    border:none;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap:1rem;
+    padding-left:0;
+    color:white;
+    transition:500ms;
 }
