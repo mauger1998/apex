@@ -329,9 +329,7 @@ main p {
     main h1 {
         font-size:45px;
     }
-    main .wrapper {
-        min-height:650px !important;
-    }
+  
 }
 /* Gallery */
 
