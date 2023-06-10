@@ -310,7 +310,7 @@ main h1 {
     max-width:20ch;
 }
 main p {
-    max-width:60ch;
+    max-width:65ch;
     color:white;
 }
 
@@ -499,7 +499,7 @@ main p {
 
 .test-grid {
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width:100%;
     gap:2rem;
 }
