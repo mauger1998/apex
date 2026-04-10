@@ -463,15 +463,33 @@ fieldset > fieldset {
 label {
     line-height:1;
 }
-fieldset:nth-of-type(3) {
+/* Single-field rows: job address, start date, message */
+fieldset:nth-of-type(3),
+fieldset:nth-of-type(5),
+fieldset:nth-of-type(6) {
     flex-direction: column;
     align-items: flex-start;
     gap:0.5rem;
 }
 input,
-textarea {
+textarea,
+select {
     padding:0.5rem;
     width:100%;
+    border:1px solid #ccc;
+    background-color:#fff;
+    font-size:var(--text);
+}
+input[type="date"] {
+    cursor:pointer;
+}
+select {
+    cursor:pointer;
+    appearance:auto;
+}
+.invalid {
+    border-color:red !important;
+    outline:1px solid red;
 }
 .form-right p {
     margin-top:-2rem;
